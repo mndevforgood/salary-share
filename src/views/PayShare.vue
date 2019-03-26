@@ -117,7 +117,7 @@ export default class PayShare extends Vue {
   }
 
   mounted(): void {
-    new ClipboardJS('.share-btn');
+    new ClipboardJS('.share-button');
   }
 }
 </script>
