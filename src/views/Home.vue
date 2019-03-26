@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <button @click="createAndNavigate()">Create New</button>
+    <h1>Pay Share</h1>
+    <p></p>
+    <button class="button" @click="createAndNavigate()">Create New</button>
   </div>
 </template>
 
@@ -22,3 +24,16 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.button {
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px 40px;
+  display: block;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+</style>

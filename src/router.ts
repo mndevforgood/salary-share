@@ -11,12 +11,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/:id',
       name: 'payShare',
-      component: () => import('./views/PayShare.vue')
-    }
-  ]
+      component: () => import('./views/PayShare.vue'),
+    },
+  ],
 });

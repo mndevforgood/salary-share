@@ -7,7 +7,7 @@ const config: Object = {
   databaseURL: 'https://payshare-96017.firebaseio.com',
   projectId: 'payshare-96017',
   storageBucket: 'payshare-96017.appspot.com',
-  messagingSenderId: '492977831731'
+  messagingSenderId: '492977831731',
 };
 
 firebase.initializeApp(config);
