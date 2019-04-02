@@ -1,8 +1,12 @@
 <template>
   <div class="home">
     <h1>Pay Share</h1>
+    <button class="button" @click="createAndNavigate()">Create</button>
+    <div class="explaination">
+      <h2>What is this?</h2>
+      <p></p>
+    </div>
     <p></p>
-    <button class="button" @click="createAndNavigate()">Create New</button>
   </div>
 </template>
 
@@ -16,7 +20,9 @@ export default class Home extends Vue {
   createAndNavigate() {
     let payId: string = '';
     db.collection('payshare')
-      .add({})
+      .add({
+        createdOn: new Date(),
+      })
       .then(docRef => {
         payId = docRef.id;
         this.$router.push({ path: `/${payId}` });
@@ -30,5 +36,8 @@ export default class Home extends Vue {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.explaination {
+  margin-top: 50px;
 }
 </style>

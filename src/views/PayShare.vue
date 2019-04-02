@@ -25,9 +25,9 @@
       autocomplete="off"
     >
       <label for="pay-input">
-        Enter your salary, hourly wage, or bonus amount here. Whatever is
-        applicable to what you want to compare with other employees. No other
-        information will be shared or stored, only what you type here.
+        Enter your current salary here. Whatever is applicable to what you want
+        to compare with other employees. No other information will be shared or
+        stored, ever.
       </label>
       <input
         required
@@ -41,7 +41,7 @@
       </button>
     </form>
     <p v-else>Thank you for sharing with the group.</p>
-    <div v-if="payLength >= 5">
+    <div v-if="!shouldDisplayInput && payLength >= 5">
       <p>Salaries in your group:</p>
       <div class="pay-meta-container">
         <p>Max: {{ highestPay }}</p>
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <p v-else>
+    <p v-else-if="!shouldDisplayInput">
       <em>
         Currently waiting for more people to enter their pay. The list will
         automatically populate once 5 people have entered their pay.
