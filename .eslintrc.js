@@ -12,7 +12,7 @@ module.exports = {
       "single",
       { "avoidEscape": true, "allowTemplateLiterals": true }
     ],
-    "prettier/prettier": ["error", {singleQuote: true, trailingComma: true }]
+    "prettier/prettier": ["error", {singleQuote: true, trailingComma: 'es5' }]
   },
   parserOptions: {
     parser: "@typescript-eslint/parser"
