@@ -171,6 +171,10 @@ export default class PayShare extends Vue {
   max-width: 450px;
 }
 
+.share-container {
+  margin-bottom: 50px;
+}
+
 .share-link {
   word-wrap: break-word;
 }
@@ -231,6 +235,7 @@ export default class PayShare extends Vue {
 .pay-item {
   border-radius: 5px;
   background: #ddd;
+  color: #333;
   padding: 10px 20px;
   display: inline-block;
 }
